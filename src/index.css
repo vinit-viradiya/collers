@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #FFFBEB;
+  color: #0F172A;
+}
+
+.text-white {
+  color: #FFF;
+}
+
+.list-tick {
+  list-style-image: url(assets/tick.svg);
+  margin-left: 27px;
+}
+
+.container {
+  max-width: 1312px;
+}
+
+.events::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(assets/events-shape.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  z-index: 0;
+}
+.collectors::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(assets/collectors-shape.svg);
+  background-repeat: no-repeat;
+  background-position: 0 250px;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (min-width:992px) {
+  .f-sec::before {
+    content: '';
+    position: absolute;
+    width: 220%;
+    height: 100%;
+    background-color: #FEF3C7;
+    inset: 0;
+    z-index: -1;
+    rotate: -28deg;
+  }
+}
